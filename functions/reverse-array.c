@@ -10,9 +10,37 @@
 */
 #include <stdio.h>
 
-// Function Prototypes
-void print_array(int *array);
-void reverse_array(int *array);
+void print_array(int *arr) {
+
+	// Declare Variable
+	int i;
+	
+	// Print out the values of the arr[]
+	for (i = 0; i < 5; i++) {
+		printf("%d ", arr[i]);
+	}
+	printf("\n");
+
+}
+void reverse_array(int *arr) {
+
+	// Declare Variables
+	int i, j;
+	int temp[5];	
+
+	// Copy array into a temp_array[]
+	for (i = 0; i < 5; i++) {
+		temp[i] = arr[i];
+	}
+	
+	// Place values of temp[] -> arr[] in reverse order	
+	for (i = 0, j = 4; i < 5; i++) {
+		arr[i] = temp[j--];
+	}	
+	
+	// Go back to where you came from!
+	return;	
+}
 
 int main() {
 	
